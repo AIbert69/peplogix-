@@ -1,0 +1,123 @@
+.section {
+  background-color: var(--copper-wash);
+  border-top: 1px solid rgba(208, 90, 58, 0.15);
+  border-bottom: 1px solid rgba(208, 90, 58, 0.15);
+  padding: 64px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.labLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.labBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--copper);
+  letter-spacing: 0.01em;
+}
+
+.labDivider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(208, 90, 58, 0.3);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.body {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(208, 90, 58, 0.2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(208, 90, 58, 0.2);
+  flex-shrink: 0;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--copper);
+  letter-spacing: 0.02em;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+@media (max-width: 480px) {
+  .labLogos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .labDivider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .statDivider {
+    width: 40px;
+    height: 1px;
+  }
+}

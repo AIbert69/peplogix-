@@ -1,0 +1,19 @@
+.bar {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 9px 24px;
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 12px;
+  }
+}
