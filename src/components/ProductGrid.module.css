@@ -1,0 +1,208 @@
+.section {
+  padding: var(--section-py) 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.overline {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.subtext {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow var(--transition), border-color var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--gray-300);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+}
+
+.badgeSeller {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.badgeNew {
+  background-color: var(--copper);
+  color: var(--white);
+}
+
+/* Purity */
+.purityRow {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.purityLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.purityValue {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+/* Vial */
+.vialWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0 20px;
+  background-color: var(--gray-50);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+/* Card body */
+.cardBody {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  background-color: var(--teal-wash);
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.spec {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+/* CTA */
+.cardCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  border-top: 1px solid var(--gray-200);
+  padding-top: 16px;
+  transition: color var(--transition);
+}
+
+.cardCta:hover {
+  color: var(--teal-dark);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  border: 1.5px solid var(--teal);
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.viewAll:hover {
+  background-color: var(--teal-wash);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

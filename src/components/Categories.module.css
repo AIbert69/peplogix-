@@ -1,0 +1,118 @@
+.section {
+  padding: var(--section-py) 0;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  text-align: left;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.overline {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.subtext {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background-color: var(--gray-200);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 28px 24px;
+  background-color: var(--white);
+  transition: background-color var(--transition);
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--teal-wash-hover);
+}
+
+.card:hover .iconWrap {
+  color: var(--teal-dark);
+}
+
+.card:hover .cardLink {
+  color: var(--teal-dark);
+}
+
+.iconWrap {
+  color: var(--navy);
+  opacity: 0.7;
+  transition: color var(--transition);
+  width: 28px;
+  height: 28px;
+}
+
+.cardName {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-top: 4px;
+  transition: color var(--transition);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px 20px;
+  }
+}

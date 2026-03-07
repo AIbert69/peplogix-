@@ -1,0 +1,5 @@
+.page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; gap: 16px; }
+.icon { width: 56px; height: 56px; color: #CBD5E1; }
+.title { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #1E2D3D; }
+.desc { font-size: 15px; color: #9CA3AF; max-width: 400px; line-height: 1.65; }
+.badge { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4DBFBA; background: rgba(77,191,186,0.1); padding: 4px 12px; border-radius: 3px; border: 1px solid rgba(77,191,186,0.2); }
