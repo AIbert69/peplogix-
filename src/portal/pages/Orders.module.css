@@ -1,0 +1,72 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.pageTitle { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #1E2D3D; margin-bottom: 2px; }
+.pageSubtitle { font-size: 13px; color: #9CA3AF; }
+
+.summaryRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.sumCard { background: white; border: 1px solid #E5E7EB; border-radius: 6px; padding: 18px 20px; }
+.sumVal { font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: #1E2D3D; }
+.sumLbl { font-size: 12px; color: #9CA3AF; margin-top: 3px; }
+
+.tableCard { background: white; border: 1px solid #E5E7EB; border-radius: 6px; overflow: hidden; }
+
+.toolbar { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-bottom: 1px solid #F3F4F6; flex-wrap: wrap; }
+
+.searchWrap { position: relative; flex: 1; min-width: 180px; max-width: 260px; }
+.searchIcon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: #9CA3AF; }
+.searchInput {
+  font-family: var(--font-body); font-size: 13px;
+  width: 100%; height: 34px; padding: 0 12px 0 30px;
+  border: 1px solid #E5E7EB; border-radius: 4px; outline: none; background: #FAFAFA;
+}
+.searchInput:focus { border-color: #4DBFBA; background: white; }
+
+.filterSelect {
+  font-family: var(--font-body); font-size: 13px;
+  height: 34px; padding: 0 10px; border: 1px solid #E5E7EB;
+  border-radius: 4px; background: white; color: #374151; outline: none; cursor: pointer;
+}
+
+.count { font-size: 13px; color: #9CA3AF; margin-left: auto; }
+
+.tableWrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 1000px; }
+th {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  color: #9CA3AF; padding: 10px 14px; text-align: left;
+  background: #FAFAFA; border-bottom: 1px solid #F3F4F6; white-space: nowrap;
+}
+td { font-size: 13px; color: #374151; padding: 12px 14px; border-bottom: 1px solid #F9FAFB; vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #FAFAFA; }
+
+.orderId { font-weight: 700; color: #1E2D3D; font-size: 12px; letter-spacing: 0.04em; }
+
+.physicianBadge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; color: #1D4ED8;
+  background: #DBEAFE; padding: 2px 7px; border-radius: 3px; white-space: nowrap;
+}
+
+.amount { font-weight: 700; color: #1E2D3D; }
+
+.pill {
+  display: inline-flex; align-items: center;
+  font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; white-space: nowrap;
+}
+.pillGreen { background: #D1FAE5; color: #059669; }
+.pillRed { background: #FEE2E2; color: #DC2626; }
+.pillBlue { background: #DBEAFE; color: #1D4ED8; }
+.pillGray { background: #F3F4F6; color: #6B7280; }
+.pillAmber { background: #FEF3C7; color: #D97706; }
+
+.noteText { font-size: 12px; color: #9CA3AF; font-style: italic; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pagination { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-top: 1px solid #F3F4F6; }
+.paginationInfo { font-size: 13px; color: #9CA3AF; }
+.paginationBtns { display: flex; gap: 6px; }
+.pageBtn { height: 30px; min-width: 30px; padding: 0 8px; border: 1px solid #E5E7EB; border-radius: 4px; font-family: var(--font-body); font-size: 13px; color: #374151; background: white; cursor: pointer; transition: border-color 150ms; }
+.pageBtn:hover:not(:disabled) { border-color: #4DBFBA; color: #4DBFBA; }
+.pageBtn:disabled { opacity: 0.4; cursor: default; }
+.pageBtnActive { background: #4DBFBA; color: white !important; border-color: #4DBFBA !important; }
+
+@media (max-width: 800px) { .summaryRow { grid-template-columns: repeat(2, 1fr); } }

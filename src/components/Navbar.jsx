@@ -13,7 +13,7 @@ const catalogItems = [
 const providerItems = [
   { label: 'Provider Overview', href: '#providers' },
   { label: 'Request Provider Access', href: '#providers' },
-  { label: 'Provider Portal Login', href: '#login' },
+  { label: 'Provider Portal Login', href: '/portal' },
   { label: 'Compliance & Documentation', href: '#compliance' },
 ]
 
@@ -123,7 +123,7 @@ export default function Navbar() {
 
           {/* Right actions */}
           <div className={styles.navActions}>
-            <a href="#login" className={styles.loginLink}>Login</a>
+            <a href="/portal" className={styles.loginLink}>Login</a>
             <a href="#provider-access" className={styles.ctaBtn}>Provider Access</a>
           </div>
 
@@ -159,7 +159,7 @@ export default function Navbar() {
             <a href="#contact" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Contact</a>
             <a href="#new-products" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>New Products</a>
             <div className={styles.mobileDivider} />
-            <a href="#login" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Login</a>
+            <a href="/portal" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Login</a>
             <a href="#provider-access" className={styles.mobileCtaBtn} onClick={() => setMobileOpen(false)}>Provider Access</a>
           </div>
         )}

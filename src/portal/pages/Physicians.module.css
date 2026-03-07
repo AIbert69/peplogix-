@@ -1,0 +1,103 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+
+.header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.headerLeft {}
+.pageTitle { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #1E2D3D; margin-bottom: 2px; }
+.pageSubtitle { font-size: 13px; color: #9CA3AF; }
+
+.inviteBtn {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: white; background-color: #4DBFBA; padding: 9px 18px; border-radius: 4px; border: none; cursor: pointer; transition: background-color 150ms;
+}
+.inviteBtn:hover { background-color: #2a9d98; }
+
+.tableCard { background: white; border: 1px solid #E5E7EB; border-radius: 6px; overflow: hidden; }
+
+.tableToolbar {
+  display: flex; align-items: center; gap: 10px; padding: 14px 20px;
+  border-bottom: 1px solid #F3F4F6; flex-wrap: wrap;
+}
+
+.searchWrap { position: relative; flex: 1; min-width: 180px; max-width: 260px; }
+.searchIcon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: #9CA3AF; }
+.searchInput {
+  font-family: var(--font-body); font-size: 13px;
+  width: 100%; height: 34px; padding: 0 12px 0 30px;
+  border: 1px solid #E5E7EB; border-radius: 4px; outline: none;
+  background: #FAFAFA; color: #1E2D3D;
+}
+.searchInput:focus { border-color: #4DBFBA; background: white; }
+
+.filterSelect {
+  font-family: var(--font-body); font-size: 13px;
+  height: 34px; padding: 0 10px; border: 1px solid #E5E7EB;
+  border-radius: 4px; background: white; color: #374151; outline: none; cursor: pointer;
+}
+
+.exportBtn {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  color: #374151; background: white; border: 1px solid #E5E7EB;
+  height: 34px; padding: 0 12px; border-radius: 4px; cursor: pointer; transition: border-color 150ms;
+  margin-left: auto;
+}
+.exportBtn:hover { border-color: #4DBFBA; color: #4DBFBA; }
+
+.tableCount { font-size: 13px; color: #9CA3AF; }
+
+.tableWrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; }
+th {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  color: #9CA3AF; padding: 10px 14px; text-align: left;
+  background: #FAFAFA; border-bottom: 1px solid #F3F4F6; white-space: nowrap;
+}
+td { font-size: 13px; color: #374151; padding: 12px 14px; border-bottom: 1px solid #F9FAFB; vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #FAFAFA; }
+
+.docName { font-weight: 600; color: #1E2D3D; }
+
+.stateBadge {
+  display: inline-flex; align-items: center;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  padding: 2px 8px; border-radius: 3px;
+  background: #EFF6FF; color: #1D4ED8;
+}
+
+.payTermBadge {
+  font-size: 12px; font-weight: 600; color: #6B7280;
+  background: #F3F4F6; padding: 2px 8px; border-radius: 3px;
+  display: inline-flex; align-items: center;
+}
+
+/* Toggle */
+.toggle { position: relative; width: 36px; height: 20px; cursor: pointer; }
+.toggleInput { opacity: 0; width: 0; height: 0; position: absolute; }
+.toggleSlider {
+  position: absolute; inset: 0; border-radius: 20px;
+  background: #D1D5DB; transition: background-color 200ms;
+}
+.toggleInput:checked + .toggleSlider { background: #22C55E; }
+.toggleSlider::before {
+  content: ''; position: absolute;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: white; top: 3px; left: 3px;
+  transition: transform 200ms; box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.toggleInput:checked + .toggleSlider::before { transform: translateX(16px); }
+
+/* Pagination */
+.pagination { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-top: 1px solid #F3F4F6; }
+.paginationInfo { font-size: 13px; color: #9CA3AF; }
+.paginationBtns { display: flex; gap: 6px; }
+.pageBtn {
+  height: 30px; min-width: 30px; padding: 0 8px;
+  border: 1px solid #E5E7EB; border-radius: 4px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  color: #374151; background: white; cursor: pointer; transition: border-color 150ms, background-color 150ms;
+}
+.pageBtn:hover:not(:disabled) { border-color: #4DBFBA; color: #4DBFBA; }
+.pageBtn:disabled { opacity: 0.4; cursor: default; }
+.pageBtnActive { background: #4DBFBA; color: white !important; border-color: #4DBFBA !important; }

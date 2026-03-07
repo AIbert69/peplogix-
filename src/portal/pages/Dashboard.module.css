@@ -1,0 +1,106 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.pageHeader { display: flex; align-items: center; justify-content: space-between; }
+.pageTitle { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #1E2D3D; }
+.pageDate { font-size: 13px; color: #9CA3AF; }
+
+/* Stat cards */
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.statCard {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statHeader { display: flex; align-items: flex-start; justify-content: space-between; }
+
+.statIcon {
+  width: 36px; height: 36px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.statIcon svg { width: 18px; height: 18px; }
+
+.statTrend {
+  display: flex; align-items: center; gap: 3px;
+  font-size: 12px; font-weight: 600;
+  padding: 2px 7px; border-radius: 3px;
+}
+
+.trendUp { color: #059669; background-color: #D1FAE5; }
+.trendNeutral { color: #6B7280; background-color: #F3F4F6; }
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 30px; font-weight: 700; color: #1E2D3D; line-height: 1;
+}
+
+.statLabel { font-size: 13px; color: #6B7280; font-weight: 500; }
+
+/* Charts row */
+.chartsRow { display: grid; grid-template-columns: 1fr 380px; gap: 16px; }
+
+.chartCard {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 22px 24px;
+}
+
+.chartHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.chartTitle { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: #1E2D3D; }
+.chartSubtitle { font-size: 12px; color: #9CA3AF; }
+
+.chartTotal {
+  display: flex; align-items: baseline; gap: 4px;
+}
+.chartTotalValue { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: #1E2D3D; }
+.chartTotalLabel { font-size: 12px; color: #9CA3AF; }
+
+/* Donut legend */
+.donutWrap { display: flex; flex-direction: column; gap: 0; }
+.donutChart { height: 220px; }
+
+.legend { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid #F3F4F6; }
+.legendItem { display: flex; align-items: center; gap: 10px; }
+.legendDot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.legendName { font-size: 13px; color: #374151; flex: 1; }
+.legendValue { font-size: 13px; font-weight: 600; color: #1E2D3D; }
+.legendPct { font-size: 12px; color: #9CA3AF; min-width: 42px; text-align: right; }
+
+/* Recent orders table */
+.tableCard { background: white; border: 1px solid #E5E7EB; border-radius: 6px; overflow: hidden; }
+.tableHeader { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #F3F4F6; }
+.tableTitle { font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: #1E2D3D; }
+.viewAll { font-size: 13px; font-weight: 600; color: #4DBFBA; text-decoration: none; }
+.viewAll:hover { color: #2a9d98; }
+
+table { width: 100%; border-collapse: collapse; }
+th { font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #9CA3AF; padding: 10px 20px; text-align: left; background-color: #FAFAFA; border-bottom: 1px solid #F3F4F6; }
+td { font-size: 13px; color: #374151; padding: 12px 20px; border-bottom: 1px solid #F9FAFB; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #FAFAFA; }
+
+.pill {
+  display: inline-flex; align-items: center;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+  padding: 2px 8px; border-radius: 3px;
+}
+.pillGreen { background-color: #D1FAE5; color: #059669; }
+.pillRed { background-color: #FEE2E2; color: #DC2626; }
+.pillBlue { background-color: #DBEAFE; color: #1D4ED8; }
+.pillGray { background-color: #F3F4F6; color: #6B7280; }
+.pillAmber { background-color: #FEF3C7; color: #D97706; }
+
+@media (max-width: 1200px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .chartsRow { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+}
