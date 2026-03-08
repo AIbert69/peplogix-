@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './LandingPage.module.css'
 
 const products = [
@@ -24,6 +25,8 @@ const products = [
 ]
 
 export default function LandingPage() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <>
       {/* Navbar */}
@@ -37,13 +40,36 @@ export default function LandingPage() {
             <a href="#products" className={styles.navLink}>Products</a>
             <a href="#science" className={styles.navLink}>Science</a>
             <a href="#about" className={styles.navLink}>About Us</a>
-            <a href="/portal/dashboard" className={styles.navLink}>Provider Login</a>
+            <a href="/portal/dashboard" className={styles.navLink}>Physician Portal</a>
           </nav>
           <div className={styles.navRight}>
-            <a href="/portal/dashboard" className={styles.btnContact}>Provider Login</a>
+            <a href="/portal/dashboard" className={styles.btnContact}>Physician Portal</a>
           </div>
+          <button
+            className={styles.hamburger}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(o => !o)}
+          >
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+          </button>
         </div>
       </header>
+
+      {/* Mobile nav menu */}
+      {menuOpen && (
+        <div className={styles.mobileMenu}>
+          <a href="/" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#products" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Products</a>
+          <a href="#science" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Science</a>
+          <a href="#about" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>About Us</a>
+          <a href="/portal/dashboard" className={`${styles.mobileLink} ${styles.mobileLinkCta}`} onClick={() => setMenuOpen(false)}>
+            Physician Portal
+          </a>
+        </div>
+      )}
 
       {/* Hero */}
       <section className={styles.hero}>

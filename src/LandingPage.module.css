@@ -89,6 +89,31 @@
   align-items: center;
 }
 
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--navy);
+  border-radius: 2px;
+}
+
+/* Mobile dropdown — hidden on desktop */
+.mobileMenu {
+  display: none;
+}
+
 /* ============================================================
    Hero
    ============================================================ */
@@ -387,6 +412,34 @@
   .navCenter { display: none; }
   .navRight { display: none; }
   .logo img { height: 38px; }
+  .hamburger { display: flex; }
+
+  /* Mobile menu */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 0;
+  }
+
+  .mobileLink {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobileLink:last-child {
+    border-bottom: none;
+  }
+
+  .mobileLinkCta {
+    color: var(--teal);
+    font-weight: 600;
+  }
 
   /* Hero */
   .hero {
