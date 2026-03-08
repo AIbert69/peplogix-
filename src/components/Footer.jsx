@@ -38,14 +38,13 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className={styles.brandCol}>
             <a href="/" className={styles.logoLink} aria-label="Peplogix home">
-              <svg width="160" height="36" viewBox="0 0 200 44" fill="none" aria-hidden="true">
-                <circle cx="10" cy="22" r="8" fill="#4DBFBA" opacity="0.8"/>
-                <circle cx="22" cy="14" r="5" fill="#4DBFBA" opacity="0.5"/>
-                <circle cx="22" cy="30" r="5" fill="#4DBFBA" opacity="0.5"/>
-                <line x1="10" y1="22" x2="22" y2="14" stroke="#4DBFBA" strokeWidth="1.5" opacity="0.4"/>
-                <line x1="10" y1="22" x2="22" y2="30" stroke="#4DBFBA" strokeWidth="1.5" opacity="0.4"/>
-                <text x="36" y="29" fontFamily="Georgia,serif" fontSize="22" fontWeight="700" fill="#ffffff" letterSpacing="-0.3">Peplogix</text>
-              </svg>
+              <img
+                src="/Image/peplogix-logo-white.png"
+                alt="Peplogix"
+                className={styles.logo}
+                width="160"
+                height="36"
+              />
             </a>
             <p className={styles.tagline}>
               Research-grade peptide supply for verified providers, laboratories, and research institutions.

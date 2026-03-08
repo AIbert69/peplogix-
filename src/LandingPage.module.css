@@ -1,0 +1,388 @@
+/* ============================================================
+   Global variables
+   ============================================================ */
+:root {
+  --teal: #4DBFBA;
+  --teal-hover: #3A9E9A;
+  --teal-wash: #EBF7F6;
+  --navy: #1E2D3D;
+  --copper: #D05A3A;
+  --text-dark: #1E2D3D;
+  --text-gray: #6B7A87;
+  --bg-light: #F5F7F8;
+  --white: #FFFFFF;
+  --border-color: #E2E7EB;
+}
+
+/* ============================================================
+   Base reset for this component
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.navbar {
+  background: var(--white);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-family: 'Inter', 'Karla', sans-serif;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+.navCenter {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--teal-hover);
+}
+
+.navLinkActive {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 2px;
+}
+
+.btnContact {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnContact:hover {
+  background-color: var(--teal-hover);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  position: relative;
+  background-image: url('/Image/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0 8rem;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 60%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.heroHeading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', 'Libre Baskerville', serif;
+}
+
+.heroSubtext {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.btnHero {
+  display: inline-block;
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnHero:hover {
+  background-color: var(--teal-hover);
+}
+
+/* ============================================================
+   Products
+   ============================================================ */
+.productsSection {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+  color: var(--text-dark);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.productCard {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.productImg {
+  height: 180px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImg img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.productName {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  min-height: 48px;
+  color: var(--text-dark);
+}
+
+.btnOutline {
+  display: inline-block;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnOutline:hover {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* ============================================================
+   Science
+   ============================================================ */
+.scienceSection {
+  padding: 4rem 0 6rem;
+  background: var(--white);
+}
+
+.scienceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.scienceImg img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.scienceHeading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+}
+
+.scienceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scienceList li {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 500;
+}
+
+.scienceList li::before {
+  content: '•';
+  color: var(--teal);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+/* ============================================================
+   Difference
+   ============================================================ */
+.differenceSection {
+  background: var(--teal-wash);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.differenceHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.differenceText {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-gray);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  background: var(--bg-light);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-color);
+  font-family: 'Inter', 'Karla', sans-serif;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footerLogo img {
+  height: 32px;
+}
+
+.footerContact {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.footerEmail {
+  color: var(--text-gray);
+  text-decoration: none;
+}
+
+.footerLinks {
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.footerLinks a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  color: var(--teal);
+}
+
+.footerDisclaimer {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 992px) {
+  .heroHeading { font-size: 2.5rem; }
+  .productGrid { grid-template-columns: repeat(2, 1fr); }
+  .scienceGrid { grid-template-columns: 1fr; }
+  .footerGrid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .footerDisclaimer { grid-column: span 2; }
+  .hero::before { background: rgba(255, 255, 255, 0.7); }
+}
+
+@media (max-width: 768px) {
+  .navCenter { display: none; }
+  .productGrid { grid-template-columns: 1fr; }
+  .footerGrid { grid-template-columns: 1fr; }
+  .footerDisclaimer { grid-column: span 1; }
+}
