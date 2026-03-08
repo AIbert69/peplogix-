@@ -22,6 +22,34 @@ const products = [
     spec: '5mg / vial',
     vialColor: '#4DBFBA',
     badge: 'Best Seller',
+    img: '/Image/semaglutide.png',
+  },
+  {
+    name: 'CJC-1295',
+    tag: 'Growth Hormone',
+    purity: '99.1%',
+    spec: '2mg / vial',
+    vialColor: '#4DBFBA',
+    badge: null,
+    img: '/Image/cjc-1295.png',
+  },
+  {
+    name: 'GHK-Cu',
+    tag: 'Healing & Repair',
+    purity: '99.4%',
+    spec: '50mg / vial',
+    vialColor: '#D05A3A',
+    badge: null,
+    img: '/Image/ghk-cu.png',
+  },
+  {
+    name: 'Tesamorelin',
+    tag: 'GH Peptide',
+    purity: '99.0%',
+    spec: '2mg / vial',
+    vialColor: '#4DBFBA',
+    badge: 'New',
+    img: '/Image/tesamorelin.png',
   },
   {
     name: 'BPC-157',
@@ -30,6 +58,7 @@ const products = [
     spec: '5mg / vial',
     vialColor: '#4DBFBA',
     badge: null,
+    img: null,
   },
   {
     name: 'Ipamorelin',
@@ -38,30 +67,7 @@ const products = [
     spec: '2mg / vial',
     vialColor: '#9ca3af',
     badge: null,
-  },
-  {
-    name: 'Epithalon',
-    tag: 'Thymic Peptide',
-    purity: '99.1%',
-    spec: '10mg / vial',
-    vialColor: '#4DBFBA',
-    badge: 'New',
-  },
-  {
-    name: 'Bremelanotide',
-    tag: 'Melanocortin',
-    purity: '98.9%',
-    spec: '10mg / vial',
-    vialColor: '#D05A3A',
-    badge: null,
-  },
-  {
-    name: 'Selank',
-    tag: 'Cognitive & Neural',
-    purity: '99.3%',
-    spec: '5mg / vial',
-    vialColor: '#4DBFBA',
-    badge: null,
+    img: null,
   },
 ]
 
@@ -95,7 +101,15 @@ export default function ProductGrid() {
               </div>
 
               <div className={styles.vialWrap}>
-                <VialIcon color={product.vialColor} />
+                {product.img ? (
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className={styles.productImg}
+                  />
+                ) : (
+                  <VialIcon color={product.vialColor} />
+                )}
               </div>
 
               <div className={styles.cardBody}>

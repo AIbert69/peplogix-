@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" className={styles.logoLink} aria-label="Peplogix home">
             <img
-              src="/peplogix-logo.svg"
+              src="/Image/peplogix-logo.png"
               alt="Peplogix"
               className={styles.logo}
               width="180"
