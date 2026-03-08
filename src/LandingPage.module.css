@@ -120,7 +120,7 @@
 }
 
 .heroHeading {
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--navy);
@@ -214,9 +214,9 @@
   display: inline-block;
   border: 1px solid var(--teal);
   color: var(--teal);
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
   margin-top: 1rem;
   text-decoration: none;
@@ -363,26 +363,83 @@
 }
 
 .footerDisclaimer {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-gray);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* ============================================================
-   Responsive
+   Responsive — tablet (≤992px)
    ============================================================ */
 @media (max-width: 992px) {
-  .heroHeading { font-size: 2.5rem; }
   .productGrid { grid-template-columns: repeat(2, 1fr); }
-  .scienceGrid { grid-template-columns: 1fr; }
+  .scienceGrid { grid-template-columns: 1fr; gap: 2rem; }
   .footerGrid { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .footerDisclaimer { grid-column: span 2; }
-  .hero::before { background: rgba(255, 255, 255, 0.7); }
+  .hero::before { background: rgba(255, 255, 255, 0.78); }
 }
 
+/* ============================================================
+   Responsive — mobile (≤768px)
+   ============================================================ */
 @media (max-width: 768px) {
+  /* Navbar */
   .navCenter { display: none; }
+  .navRight { display: none; }
+  .logo img { height: 38px; }
+
+  /* Hero */
+  .hero {
+    min-height: 420px;
+    padding: 3.5rem 0 5rem;
+  }
+  .hero::before {
+    background: rgba(255, 255, 255, 0.88);
+  }
+  .heroContent { max-width: 100%; }
+  .heroSubtext {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+  .btnHero {
+    display: block;
+    text-align: center;
+  }
+
+  /* Products */
+  .productsSection { padding: 3rem 0; }
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
   .productGrid { grid-template-columns: 1fr; }
-  .footerGrid { grid-template-columns: 1fr; }
+  .productCard { padding: 1.25rem 0.75rem; }
+  .productImg { height: 140px; margin-bottom: 1rem; }
+  .btnOutline {
+    display: block;
+    text-align: center;
+  }
+
+  /* Science */
+  .scienceSection { padding: 3rem 0; }
+  .scienceGrid { gap: 1.5rem; }
+  .scienceHeading { font-size: 1.4rem; }
+  .scienceList li { font-size: 1rem; }
+
+  /* Difference */
+  .differenceSection { padding: 2.5rem 0; }
+  .differenceHeading { font-size: 1.25rem; }
+  .differenceText { font-size: 0.95rem; }
+
+  /* Footer */
+  .footer { padding: 2.5rem 0 1.5rem; }
+  .footerGrid { grid-template-columns: 1fr; gap: 2rem; }
   .footerDisclaimer { grid-column: span 1; }
+}
+
+/* ============================================================
+   Responsive — small phones (≤480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
 }
